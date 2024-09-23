@@ -7,3 +7,5 @@ Screenshot of terminal prompt:
 ![terminal prompt](assets/terminal.png)
 
 Full fastfetch
+![fastfetch](assets/fastfetch.png)
+
