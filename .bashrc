@@ -4,12 +4,17 @@ echo "
 ▐▌ ▐▌▐▌   ▐▌ ▐▌▐▌ ▐▌▐▌ ▐▌▐▌ ▐▌▐▌ ▐▌▐▌  █  █  ▐▌   ▐▌ ▐▌▐▌   
 ▐▛▀▜▌▐▌   ▐▛▀▘ ▐▛▀▜▌▐▛▀▜▌▐▛▀▚▖▐▛▀▜▌▐▌  █  █  ▐▌   ▐▛▀▜▌▐▌   
 ▐▌ ▐▌▐▙▄▄▖▐▌   ▐▌ ▐▌▐▌ ▐▌▐▌ ▐▌▐▌ ▐▌▐▙▄▄▀▗▄█▄▖▝▚▄▄▖▐▌ ▐▌▐▙▄▄▖
+
 "
 
-fastfetch --structure cpu:memory:disk:os:battery:uptime --logo none
+# Pokemon (making it before for the fastfetch command)
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# Pokemon as fasfetch logo
+pokeget "taillow" --hide-name | fastfetch --structure cpu:memory:disk:os:battery:uptime --file-raw - --logo-padding-right 3 --separator ":  "
 
 # gets the current weather at College Park and removes "Weather report: College+Park"
-curl -s wttr.in/College+Park?0 | sed '1d'
+# curl -s wttr.in/College+Park?0 | sed '1d'
 
 # starship prompt
 eval "$(starship init bash)"
@@ -20,31 +25,32 @@ alias unbz2='tar -xvjf'
 alias ungz='tar -xvzf'
 
 alias windscribe='windscribe-cli'
-
 # General Aliases
 alias ls='ls -a --color=auto' # I hate that I have to constantly type ls -a everytime I work with dotfiles
 alias wi='windscribe-cli connect best'
 alias g='cd ~/Documents/Github/ && clear'
 alias d='cd ~/Downloads && clear'
 alias c='clear'
+alias nvchad='nvim'
 alias e='exit'
 alias p='ping 1.1.1.1'
+alias explorer='dolphin'
 alias vim='nvim' 
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:~/.local/bin"
 
 # Spotify API
-export SPOTIPY_CLIENT_ID='' # Not for you little bro
-export SPOTIPY_CLIENT_SECRET='' # Not for you little bro
+export SPOTIPY_CLIENT_ID=''
+export SPOTIPY_CLIENT_SECRET=''
 export SPOTIPY_REDIRECT_URI='http://127.0.0.1:5000'
 
 # NV Chad
 export PATH="$PATH:/opt/nvim-linux64/bin"
 
 # Gmail API
-export API_KEY="" # Not for you little bro
-export CLIENT_ID="" # Not for you little bro
+export API_KEY=""
+export CLIENT_ID=""
 
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
@@ -54,6 +60,8 @@ export PATH="$HOME/gems/bin:$PATH"
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
