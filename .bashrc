@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "
- ▗▄▖ ▗▖   ▗▄▄▖ ▗▖ ▗▖ ▗▄▖ ▗▄▄▖  ▗▄▖ ▗▄▄▄ ▗▄▄▄▖ ▗▄▄▖ ▗▄▖ ▗▖   
-▐▌ ▐▌▐▌   ▐▌ ▐▌▐▌ ▐▌▐▌ ▐▌▐▌ ▐▌▐▌ ▐▌▐▌  █  █  ▐▌   ▐▌ ▐▌▐▌   
-▐▛▀▜▌▐▌   ▐▛▀▘ ▐▛▀▜▌▐▛▀▜▌▐▛▀▚▖▐▛▀▜▌▐▌  █  █  ▐▌   ▐▛▀▜▌▐▌   
+ ▗▄▖ ▗▖   ▗▄▄▖ ▗▖ ▗▖ ▗▄▖ ▗▄▄▖  ▗▄▖ ▗▄▄▄ ▗▄▄▄▖ ▗▄▄▖ ▗▄▖ ▗▖
+▐▌ ▐▌▐▌   ▐▌ ▐▌▐▌ ▐▌▐▌ ▐▌▐▌ ▐▌▐▌ ▐▌▐▌  █  █  ▐▌   ▐▌ ▐▌▐▌
+▐▛▀▜▌▐▌   ▐▛▀▘ ▐▛▀▜▌▐▛▀▜▌▐▛▀▚▖▐▛▀▜▌▐▌  █  █  ▐▌   ▐▛▀▜▌▐▌
 ▐▌ ▐▌▐▙▄▄▖▐▌   ▐▌ ▐▌▐▌ ▐▌▐▌ ▐▌▐▌ ▐▌▐▙▄▄▀▗▄█▄▖▝▚▄▄▖▐▌ ▐▌▐▙▄▄▖
 
 "
@@ -35,22 +35,13 @@ alias nvchad='nvim'
 alias e='exit'
 alias p='ping 1.1.1.1'
 alias explorer='dolphin'
-alias vim='nvim' 
+alias vim='nvim'
 
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH="$PATH:~/.local/bin"
 
-# Spotify API
-export SPOTIPY_CLIENT_ID=''
-export SPOTIPY_CLIENT_SECRET=''
-export SPOTIPY_REDIRECT_URI='http://127.0.0.1:5000'
-
 # NV Chad
 export PATH="$PATH:/opt/nvim-linux64/bin"
-
-# Gmail API
-export API_KEY=""
-export CLIENT_ID=""
 
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
@@ -60,8 +51,6 @@ export PATH="$HOME/gems/bin:$PATH"
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
